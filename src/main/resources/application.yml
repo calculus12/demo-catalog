@@ -1,7 +1,6 @@
 spring.application.name: demo-catalog
 
 server:
-  port: 9001
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 10s
@@ -19,6 +18,10 @@ spring:
       maximum-pool-size: 5
   sql:
     init:
-      data-locations: classpath:db/migration/V1__Initial_schema.sql
+      mode: never
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
 polar:
   greeting: Welcome to the local book catalog!
