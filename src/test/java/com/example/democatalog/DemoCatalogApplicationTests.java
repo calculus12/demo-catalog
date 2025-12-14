@@ -20,7 +20,7 @@ class DemoCatalogApplicationTests {
 
     @Test
     void whenPostRequestThenBookCreated() {
-        var expectedBook = new Book("1231231231", "title", "author", 0.9);
+        var expectedBook = Book.of("1231231231", "title", "author", 0.9);
 
         webTestClient
                 .post()

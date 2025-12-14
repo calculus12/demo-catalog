@@ -20,14 +20,14 @@ class BookValidationTest {
 
     @Test
     void whenAllFieldsAreValid() {
-        var book = new Book("1234567890", "title", "author", 10.2);
+        var book = Book.of("1234567890", "title", "author", 10.2);
         Set<ConstraintViolation<Book>> violations = validator.validate(book);
         assertEquals(0, violations.size());
     }
 
     @Test
     void whenIsbnIsInvalid() {
-        var book = new Book("123", "title", "author", 10.2);
+        var book = Book.of("123", "title", "author", 10.2);
         Set<ConstraintViolation<Book>> violations = validator.validate(book);
         assertEquals(1, violations.size());
         ConstraintViolation<Book> isbnViolation = violations.iterator().next();

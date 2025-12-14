@@ -32,7 +32,7 @@ public class BookService {
     public Book editBookDetails(String isbn, Book book) {
         return bookRepository.findByIsbn(isbn)
                 .map(exsistingBook -> {
-                    var bookToUpdated = new Book(
+                    var bookToUpdated = Book.of(
                             exsistingBook.isbn(),
                             book.title(),
                             book.author(),
