@@ -46,5 +46,12 @@ bootRun {
 }
 
 tasks.named('test') {
+    def mockitoVersion = "5.20.0"
+    def mockitoCoreJar = configurations.testRuntimeClasspath.files.find {
+        it.name.contains("mockito-core")
+    }
+    if (mockitoCoreJar != null) {
+        jvmArgs "-javaagent:${mockitoCoreJar.absolutePath}"
+    }
     useJUnitPlatform()
 }
