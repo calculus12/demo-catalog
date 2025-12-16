@@ -1,6 +1,7 @@
 spring.application.name: demo-catalog
 
 server:
+  port: 9001
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 10s
