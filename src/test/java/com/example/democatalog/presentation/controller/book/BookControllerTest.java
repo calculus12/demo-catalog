@@ -1,7 +1,7 @@
 package com.example.democatalog.presentation.controller.book;
 
 import com.example.democatalog.domain.BookNotFoundException;
-import com.example.democatalog.domain.BookService;
+import com.example.democatalog.service.BookService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;

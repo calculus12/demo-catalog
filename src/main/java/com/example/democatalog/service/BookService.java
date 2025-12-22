@@ -1,5 +1,8 @@
-package com.example.democatalog.domain;
+package com.example.democatalog.service;
 
+import com.example.democatalog.domain.Book;
+import com.example.democatalog.domain.BookAlreadyExistsException;
+import com.example.democatalog.domain.BookNotFoundException;
 import com.example.democatalog.persistence.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

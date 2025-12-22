@@ -1,7 +1,7 @@
 package com.example.democatalog.presentation.controller.book;
 
 import com.example.democatalog.domain.Book;
-import com.example.democatalog.domain.BookService;
+import com.example.democatalog.service.BookService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
