@@ -1,8 +1,9 @@
 allow_k8s_contexts('minikube')
 
+# Windows
 custom_build(
     'catalog-service',
-    command = './gradlew bootBuildImage --imageName $EXPECTED_REF',
+    command = 'gradlew.bat bootBuildImage --imageName %EXPECTED_REF%',
     deps = ['build.gradle', 'src']
 )
 
